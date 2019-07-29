@@ -11,6 +11,7 @@ import java.io.FileWriter;
 import java.io.IOException;	
 public class StudentTest {
 	Hostel h ;
+	private boolean chk;
 	@SuppressWarnings("static-access")
 	@Test
 	public void studentNameTest() throws IOException {
@@ -30,20 +31,14 @@ public class StudentTest {
 	           }finally{
 	               out.close();
 	           }
-		
-		
-		assertEquals(true,h.verifyName("tekjhgfdsst"));
-		
-		
-		
-		
-//		fail("Not yet implemented");
+		assertEquals(true,h.verifyName("tekjhgfdsst"));		
+	// fail("Not yet implemented");
 	}
 	@SuppressWarnings("static-access")
 	@Test
 	public void studentDuplicacyTest() throws IOException{
-//		boolean chk = true;
-		assertEquals(false,h.verifyName("abcdef"));
+  //	boolean chk = true;
+		assertEquals(true,h.verifyName("abcdef"));
 	}
 
 
